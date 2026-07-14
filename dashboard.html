@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dashboard Saya – BelajarPintar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1e293b;}
+a{text-decoration:none;color:inherit;}button{font-family:'Poppins',sans-serif;cursor:pointer;}img{display:block;max-width:100%;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#2563eb;color:#fff;border:none;padding:10px 22px;border-radius:25px;font-size:.86rem;font-weight:600;cursor:pointer;text-decoration:none;}
+footer{background:#0a0e27;color:rgba(255,255,255,.5);padding:18px 0;margin-top:56px;text-align:center;font-size:.8rem;}
+.toast-c{position:fixed;bottom:22px;left:22px;z-index:500;display:flex;flex-direction:column;gap:7px;}
+.toast{background:#0a0e27;color:#fff;padding:11px 17px;border-radius:10px;font-size:.83rem;animation:fadeUp .3s;border-left:3px solid #2563eb;}
+.page-hero{background:linear-gradient(135deg,#0a0e27,#1e1b4b);padding:44px 0;color:#fff;text-align:center;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head><body>
+<nav style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e8f0;backdrop-filter:blur(10px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between">
+    <a href="index.html" style="font-size:1.3rem;font-weight:800;color:#0a0e27;text-decoration:none">Belajar<span style="color:#2563eb">Pintar</span></a>
+    <div style="display:flex;gap:4px">
+      <a href="courses.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Kursus</a>
+      <a href="instructors.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Instruktur</a>
+      <a href="dashboard.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Dashboard</a>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="login.html" style="padding:9px 18px;border:1.5px solid #e2e8f0;border-radius:25px;font-size:.84rem;font-weight:600;color:#475569">Masuk</a>
+      <a href="register.html" class="btn">Daftar</a>
+    </div>
+  </div>
+</nav>
+<div class="page-hero"><div class="container">
+  <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:6px">Dashboard Saya</h1>
+  <p style="color:rgba(255,255,255,.6);font-size:.88rem">BelajarPintar – Platform Kursus Online Indonesia</p>
+</div></div>
+<div class="container" style="padding:36px 24px">
+<div style="display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start">
+  <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:16px">
+    <div style="text-align:center;padding-bottom:14px;border-bottom:1px solid #f1f5f9;margin-bottom:14px">
+      <img src="https://i.pravatar.cc/70?img=2" style="width:70px;height:70px;border-radius:50%;margin:0 auto 8px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.9rem">Andi Pelajar</div>
+      <div style="font-size:.74rem;color:#94a3b8">Member Premium</div>
+    </div><div style="display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:.84rem;font-weight:500;color:#475569;margin-bottom:2px" onmouseover="this.style.background='rgba(37,99,235,.06)'" onmouseout="this.style.background=''"><i class="fas fa-th-large" style="color:#2563eb;width:16px;text-align:center;font-size:.85rem"></i>Dashboard</div><div style="display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:.84rem;font-weight:500;color:#475569;margin-bottom:2px" onmouseover="this.style.background='rgba(37,99,235,.06)'" onmouseout="this.style.background=''"><i class="fas fa-play-circle" style="color:#2563eb;width:16px;text-align:center;font-size:.85rem"></i>Kursus Saya</div><div style="display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:.84rem;font-weight:500;color:#475569;margin-bottom:2px" onmouseover="this.style.background='rgba(37,99,235,.06)'" onmouseout="this.style.background=''"><i class="fas fa-certificate" style="color:#2563eb;width:16px;text-align:center;font-size:.85rem"></i>Sertifikat</div><div style="display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:.84rem;font-weight:500;color:#475569;margin-bottom:2px" onmouseover="this.style.background='rgba(37,99,235,.06)'" onmouseout="this.style.background=''"><i class="fas fa-bookmark" style="color:#2563eb;width:16px;text-align:center;font-size:.85rem"></i>Tersimpan</div><div style="display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:.84rem;font-weight:500;color:#475569;margin-bottom:2px" onmouseover="this.style.background='rgba(37,99,235,.06)'" onmouseout="this.style.background=''"><i class="fas fa-chart-line" style="color:#2563eb;width:16px;text-align:center;font-size:.85rem"></i>Progress</div><div style="display:flex;align-items:center;gap:9px;padding:9px 10px;border-radius:8px;cursor:pointer;font-size:.84rem;font-weight:500;color:#475569;margin-bottom:2px" onmouseover="this.style.background='rgba(37,99,235,.06)'" onmouseout="this.style.background=''"><i class="fas fa-cog" style="color:#2563eb;width:16px;text-align:center;font-size:.85rem"></i>Pengaturan</div>
+  </div>
+  <div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px"><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;text-align:center"><div style="font-size:1.4rem;font-weight:800;color:#2563eb">5</div><div style="font-size:.72rem;color:#94a3b8">Kursus Aktif</div></div><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;text-align:center"><div style="font-size:1.4rem;font-weight:800;color:#2563eb">3</div><div style="font-size:.72rem;color:#94a3b8">Selesai</div></div><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;text-align:center"><div style="font-size:1.4rem;font-weight:800;color:#2563eb">2</div><div style="font-size:.72rem;color:#94a3b8">Sertifikat</div></div><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;text-align:center"><div style="font-size:1.4rem;font-weight:800;color:#2563eb">78%</div><div style="font-size:.72rem;color:#94a3b8">Rata-rata</div></div></div>
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:20px;margin-bottom:16px">
+      <h3 style="font-weight:700;font-size:.9rem;margin-bottom:14px">Kursus Sedang Dipelajari</h3><div style="border:1px solid #f1f5f9;border-radius:10px;padding:14px;margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:.86rem;font-weight:600">Full-Stack Web Development</span><span style="font-size:.76rem;color:#2563eb;font-weight:700">65%</span></div><div style="height:6px;background:#e2e8f0;border-radius:3px"><div style="height:100%;background:#2563eb;border-radius:3px;width:65%"></div></div></div><div style="border:1px solid #f1f5f9;border-radius:10px;padding:14px;margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:.86rem;font-weight:600">UI/UX Design Masterclass</span><span style="font-size:.76rem;color:#2563eb;font-weight:700">30%</span></div><div style="height:6px;background:#e2e8f0;border-radius:3px"><div style="height:100%;background:#2563eb;border-radius:3px;width:30%"></div></div></div><div style="border:1px solid #f1f5f9;border-radius:10px;padding:14px;margin-bottom:10px"><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:.86rem;font-weight:600">Digital Marketing Strategy</span><span style="font-size:.76rem;color:#2563eb;font-weight:700">90%</span></div><div style="height:6px;background:#e2e8f0;border-radius:3px"><div style="height:100%;background:#2563eb;border-radius:3px;width:90%"></div></div></div>
+    </div>
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:20px">
+      <h3 style="font-weight:700;font-size:.9rem;margin-bottom:14px">Sertifikat Diraih</h3><div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f8fafc"><div style="width:40px;height:40px;border-radius:8px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-certificate" style="color:#2563eb"></i></div><div style="flex:1"><div style="font-size:.84rem;font-weight:600">Digital Marketing Strategy</div><div style="font-size:.72rem;color:#94a3b8">15 Mei 2026</div></div><button onclick="showToast('Download sertifikat...')" style="background:#2563eb;color:#fff;border:none;padding:5px 12px;border-radius:15px;font-size:.72rem;font-weight:600;cursor:pointer">Download</button></div><div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f8fafc"><div style="width:40px;height:40px;border-radius:8px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-certificate" style="color:#2563eb"></i></div><div style="flex:1"><div style="font-size:.84rem;font-weight:600">Bahasa Inggris Profesional</div><div style="font-size:.72rem;color:#94a3b8">3 Apr 2026</div></div><button onclick="showToast('Download sertifikat...')" style="background:#2563eb;color:#fff;border:none;padding:5px 12px;border-radius:15px;font-size:.72rem;font-weight:600;cursor:pointer">Download</button></div><div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #f8fafc"><div style="width:40px;height:40px;border-radius:8px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-certificate" style="color:#2563eb"></i></div><div style="flex:1"><div style="font-size:.84rem;font-weight:600">Keuangan & Investasi</div><div style="font-size:.72rem;color:#94a3b8">20 Mar 2026</div></div><button onclick="showToast('Download sertifikat...')" style="background:#2563eb;color:#fff;border:none;padding:5px 12px;border-radius:15px;font-size:.72rem;font-weight:600;cursor:pointer">Download</button></div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="toast-c" id="toastC"></div>
+<footer>© 2026 BelajarPintar · Platform Edukasi Online Indonesia</footer>
+<script>function showToast(m){const c=document.getElementById('toastC');const el=document.createElement('div');el.className='toast';el.textContent=m;c.appendChild(el);setTimeout(()=>el.remove(),3000);}</script>
+</body></html>

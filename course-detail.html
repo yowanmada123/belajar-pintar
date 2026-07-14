@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Detail Kursus – BelajarPintar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1e293b;}
+a{text-decoration:none;color:inherit;}ul{list-style:none;}button{font-family:'Poppins',sans-serif;cursor:pointer;}img{display:block;max-width:100%;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:24px;}
+.form-group{margin-bottom:14px;}
+.form-label{display:block;font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:#374151;margin-bottom:5px;}
+.form-control{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px 13px;font-size:.87rem;font-family:'Poppins',sans-serif;outline:none;color:#1e293b;transition:border-color .2s;}
+.form-control:focus{border-color:#2563eb;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#2563eb;color:#fff;border:none;padding:10px 22px;border-radius:25px;font-size:.86rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.toast-c{position:fixed;bottom:22px;left:22px;z-index:500;display:flex;flex-direction:column;gap:7px;}
+.toast{background:#0f172a;color:#fff;padding:11px 17px;border-radius:10px;font-size:.83rem;animation:fadeUp .3s;border-left:3px solid #2563eb;}
+footer{background:#0f172a;color:rgba(255,255,255,.5);padding:18px 0;text-align:center;font-size:.8rem;margin-top:60px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.form-row{grid-template-columns:1fr;}}
+</style>
+</head><body>
+<nav style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e8f0;backdrop-filter:blur(10px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between">
+    <div style="font-size:1.3rem;font-weight:800;color:#0f172a">Belajar<span style='color:#2563eb'>Pintar</span></div>
+    <a href="index.html" style="background:#2563eb;color:#fff;padding:9px 20px;border-radius:25px;font-size:.84rem;font-weight:600">← Beranda</a>
+  </div>
+</nav>
+<div style="background:linear-gradient(135deg,#0f172a,#1e293b);padding:44px 0;color:#fff;text-align:center;margin-bottom:32px">
+  <div class="container"><h1 style="font-size:1.8rem;font-weight:800;margin-bottom:6px">Detail Kursus – BelajarPintar</h1></div>
+</div>
+<div class="container" style="padding-bottom:40px" id="mc"></div>
+<div class="toast-c" id="toastC"></div>
+<footer>© 2026 Belajar<span style='color:#2563eb'>Pintar</span> · Indonesia</footer>
+<script>
+function showToast(m){const c=document.getElementById('toastC');const el=document.createElement('div');el.className='toast';el.textContent=m;c.appendChild(el);setTimeout(()=>el.remove(),3000);}
+function fmtP(n){return'Rp '+n.toLocaleString('id-ID');}
+const mc=document.getElementById('mc');
+
+mc.innerHTML='<div style="display:grid;grid-template-columns:1fr 350px;gap:24px;align-items:start"><div><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=80" style="width:100%;border-radius:14px;margin-bottom:20px"/><h2 style="font-size:1.4rem;font-weight:800;margin-bottom:8px">Full-Stack Web Development</h2><div style="display:flex;gap:12px;font-size:.78rem;color:#64748b;margin-bottom:14px"><span>★ 4.9 (2.840 ulasan)</span><span>48 jam materi</span><span>12.400 pelajar</span></div><h3 style="font-weight:700;margin-bottom:8px">Apa yang akan Anda pelajari</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:16px">'
++['HTML, CSS, JavaScript ES6+','React.js & Next.js','Node.js & Express.js','Database SQL & NoSQL','REST API & GraphQL','Deploy ke Cloud','Git & Version Control','Fullstack Project Portfolio'].map(s=>'<div style="display:flex;align-items:center;gap:7px;font-size:.82rem"><i class="fas fa-check-circle" style="color:#2563eb"></i>'+s+'</div>').join('')
++'</div><h3 style="font-weight:700;margin-bottom:8px">Kurikulum (48 Jam)</h3>'
++['Modul 1: Dasar HTML & CSS (6 jam)','Modul 2: JavaScript Fundamentals (8 jam)','Modul 3: React.js Frontend (10 jam)','Modul 4: Node.js Backend (8 jam)','Modul 5: Database & API (8 jam)','Modul 6: Final Project (8 jam)'].map((m,i)=>'<div style="border:1px solid #e2e8f0;border-radius:10px;padding:14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center"><span style="font-size:.85rem;font-weight:600">'+m+'</span><i class="fas fa-chevron-down" style="color:#94a3b8"></i></div>').join('')
++'</div><div style="position:sticky;top:80px"><div class="card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=75" style="width:100%;border-radius:10px;margin-bottom:14px"/><div style="font-size:1.8rem;font-weight:800;color:#2563eb">Rp 599.000</div><div style="font-size:.76rem;color:#94a3b8;text-decoration:line-through;margin-bottom:12px">Rp 899.000</div><button onclick="showToast(\'✅ Kursus dibeli! Selamat belajar!\')" class="btn" style="width:100%;justify-content:center;margin-bottom:8px"><i class="fas fa-graduation-cap"></i>Beli Kursus</button><button onclick="showToast(\'Ditambahkan ke wishlist!\')" style="width:100%;background:#fff;border:1.5px solid #e2e8f0;border-radius:25px;padding:10px;font-size:.84rem;font-weight:600;cursor:pointer">Tambah ke Wishlist</button>'
++['fas fa-infinity Akses seumur hidup','fas fa-mobile-alt Akses mobile & desktop','fas fa-certificate Sertifikat penyelesaian','fas fa-headset Support instruktur'].map(s=>{const[ic,t]=s.split(' ');return'<div style="display:flex;align-items:center;gap:8px;margin-top:10px;font-size:.78rem;color:#475569"><i class="'+ic+' fa-'+t+'" style="color:#2563eb"></i>'+t.charAt(0).toUpperCase()+t.slice(1)+'</div>';}).join('')
++'</div></div></div>';
+
+</script>
+</body></html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Kontak – BelajarPintar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1e293b;}
+a{text-decoration:none;color:inherit;}button{font-family:'Poppins',sans-serif;cursor:pointer;}img{display:block;max-width:100%;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#2563eb;color:#fff;border:none;padding:10px 22px;border-radius:25px;font-size:.86rem;font-weight:600;cursor:pointer;text-decoration:none;}
+footer{background:#0a0e27;color:rgba(255,255,255,.5);padding:18px 0;margin-top:56px;text-align:center;font-size:.8rem;}
+.toast-c{position:fixed;bottom:22px;left:22px;z-index:500;display:flex;flex-direction:column;gap:7px;}
+.toast{background:#0a0e27;color:#fff;padding:11px 17px;border-radius:10px;font-size:.83rem;animation:fadeUp .3s;border-left:3px solid #2563eb;}
+.page-hero{background:linear-gradient(135deg,#0a0e27,#1e1b4b);padding:44px 0;color:#fff;text-align:center;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head><body>
+<nav style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e8f0;backdrop-filter:blur(10px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between">
+    <a href="index.html" style="font-size:1.3rem;font-weight:800;color:#0a0e27;text-decoration:none">Belajar<span style="color:#2563eb">Pintar</span></a>
+    <div style="display:flex;gap:4px">
+      <a href="courses.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Kursus</a>
+      <a href="instructors.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Instruktur</a>
+      <a href="dashboard.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Dashboard</a>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="login.html" style="padding:9px 18px;border:1.5px solid #e2e8f0;border-radius:25px;font-size:.84rem;font-weight:600;color:#475569">Masuk</a>
+      <a href="register.html" class="btn">Daftar</a>
+    </div>
+  </div>
+</nav>
+<div class="page-hero"><div class="container">
+  <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:6px">Kontak</h1>
+  <p style="color:rgba(255,255,255,.6);font-size:.88rem">BelajarPintar – Platform Kursus Online Indonesia</p>
+</div></div>
+<div class="container" style="padding:36px 24px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+  <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:24px">
+    <h3 style="font-weight:700;margin-bottom:16px">Kirim Pesan</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:14px">
+      <div><div style="font-size:.73rem;font-weight:700;text-transform:uppercase;color:#374151;margin-bottom:5px">Nama</div><input style="width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px;font-size:.87rem;outline:none" type="text"/></div>
+      <div><div style="font-size:.73rem;font-weight:700;text-transform:uppercase;color:#374151;margin-bottom:5px">Email</div><input style="width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px;font-size:.87rem;outline:none" type="email"/></div>
+    </div>
+    <div style="margin-bottom:14px"><div style="font-size:.73rem;font-weight:700;text-transform:uppercase;color:#374151;margin-bottom:5px">Subjek</div><select style="width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px;font-size:.87rem;outline:none"><option>Pertanyaan Kursus</option><option>Teknis & Akun</option><option>Instruktur</option><option>Kerjasama</option></select></div>
+    <div style="margin-bottom:14px"><div style="font-size:.73rem;font-weight:700;text-transform:uppercase;color:#374151;margin-bottom:5px">Pesan</div><textarea style="width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px;font-size:.87rem;outline:none;resize:none;min-height:100px"></textarea></div>
+    <button onclick="showToast('Pesan terkirim!')" style="width:100%;background:#2563eb;color:#fff;border:none;padding:12px;border-radius:25px;font-size:.86rem;font-weight:600;cursor:pointer">Kirim Pesan</button>
+  </div>
+  <div><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px"><div style="width:42px;height:42px;border-radius:12px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-envelope" style="color:#2563eb"></i></div><div><div style="font-weight:700;font-size:.84rem">Email</div><div style="font-size:.86rem;color:#2563eb;font-weight:600">hello@belajarpintar.id</div><div style="font-size:.74rem;color:#94a3b8">Balasan 2-4 jam</div></div></div><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px"><div style="width:42px;height:42px;border-radius:12px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fab fa-whatsapp" style="color:#2563eb"></i></div><div><div style="font-weight:700;font-size:.84rem">WhatsApp</div><div style="font-size:.86rem;color:#2563eb;font-weight:600">0812-3456-7890</div><div style="font-size:.74rem;color:#94a3b8">Chat langsung</div></div></div><div style="background:#fff;border-radius:12px;border:1px solid #e2e8f0;padding:16px;margin-bottom:10px;display:flex;align-items:center;gap:14px"><div style="width:42px;height:42px;border-radius:12px;background:rgba(37,99,235,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0"><i class="fas fa-clock" style="color:#2563eb"></i></div><div><div style="font-weight:700;font-size:.84rem">Jam Operasional</div><div style="font-size:.86rem;color:#2563eb;font-weight:600">Setiap Hari 08.00–22.00</div><div style="font-size:.74rem;color:#94a3b8">Termasuk weekend</div></div></div>
+  </div>
+</div>
+</div>
+<div class="toast-c" id="toastC"></div>
+<footer>© 2026 BelajarPintar · Platform Edukasi Online Indonesia</footer>
+<script>function showToast(m){const c=document.getElementById('toastC');const el=document.createElement('div');el.className='toast';el.textContent=m;c.appendChild(el);setTimeout(()=>el.remove(),3000);}</script>
+</body></html>

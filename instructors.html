@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Instruktur – BelajarPintar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1e293b;}
+a{text-decoration:none;color:inherit;}button{font-family:'Poppins',sans-serif;cursor:pointer;}img{display:block;max-width:100%;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#2563eb;color:#fff;border:none;padding:10px 22px;border-radius:25px;font-size:.86rem;font-weight:600;cursor:pointer;text-decoration:none;}
+footer{background:#0a0e27;color:rgba(255,255,255,.5);padding:18px 0;margin-top:56px;text-align:center;font-size:.8rem;}
+.toast-c{position:fixed;bottom:22px;left:22px;z-index:500;display:flex;flex-direction:column;gap:7px;}
+.toast{background:#0a0e27;color:#fff;padding:11px 17px;border-radius:10px;font-size:.83rem;animation:fadeUp .3s;border-left:3px solid #2563eb;}
+.page-hero{background:linear-gradient(135deg,#0a0e27,#1e1b4b);padding:44px 0;color:#fff;text-align:center;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+</style>
+</head><body>
+<nav style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e8f0;backdrop-filter:blur(10px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between">
+    <a href="index.html" style="font-size:1.3rem;font-weight:800;color:#0a0e27;text-decoration:none">Belajar<span style="color:#2563eb">Pintar</span></a>
+    <div style="display:flex;gap:4px">
+      <a href="courses.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Kursus</a>
+      <a href="instructors.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Instruktur</a>
+      <a href="dashboard.html" style="padding:7px 13px;border-radius:8px;font-size:.85rem;font-weight:500;color:#475569">Dashboard</a>
+    </div>
+    <div style="display:flex;gap:8px">
+      <a href="login.html" style="padding:9px 18px;border:1.5px solid #e2e8f0;border-radius:25px;font-size:.84rem;font-weight:600;color:#475569">Masuk</a>
+      <a href="register.html" class="btn">Daftar</a>
+    </div>
+  </div>
+</nav>
+<div class="page-hero"><div class="container">
+  <h1 style="font-size:1.8rem;font-weight:800;margin-bottom:6px">Instruktur</h1>
+  <p style="color:rgba(255,255,255,.6);font-size:.88rem">BelajarPintar – Platform Kursus Online Indonesia</p>
+</div></div>
+<div class="container" style="padding:36px 24px">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px"><div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:22px;text-align:center;transition:all .25s" onmouseover="this.style.borderColor='#2563eb';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform=''">
+      <img src="https://i.pravatar.cc/80?img=3" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.92rem;margin-bottom:3px">Dimas Prabowo</div>
+      <div style="font-size:.76rem;color:#2563eb;font-weight:600;margin-bottom:5px">Web Development</div>
+      <div style="font-size:.72rem;color:#94a3b8;margin-bottom:5px">12 thn pengalaman · 2.8K siswa</div>
+      <div style="font-size:.72rem;color:#f59e0b;margin-bottom:12px">★ 4.9</div>
+      <a href="courses.html" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:20px;font-size:.74rem;font-weight:600;cursor:pointer;display:inline-block">Lihat Kursus</a>
+    </div><div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:22px;text-align:center;transition:all .25s" onmouseover="this.style.borderColor='#2563eb';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform=''">
+      <img src="https://i.pravatar.cc/80?img=9" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.92rem;margin-bottom:3px">Maya Setiawan</div>
+      <div style="font-size:.76rem;color:#2563eb;font-weight:600;margin-bottom:5px">UI/UX Design</div>
+      <div style="font-size:.72rem;color:#94a3b8;margin-bottom:5px">9 thn pengalaman · 1.9K siswa</div>
+      <div style="font-size:.72rem;color:#f59e0b;margin-bottom:12px">★ 4.8</div>
+      <a href="courses.html" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:20px;font-size:.74rem;font-weight:600;cursor:pointer;display:inline-block">Lihat Kursus</a>
+    </div><div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:22px;text-align:center;transition:all .25s" onmouseover="this.style.borderColor='#2563eb';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform=''">
+      <img src="https://i.pravatar.cc/80?img=5" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.92rem;margin-bottom:3px">Dr. Farid Nugroho</div>
+      <div style="font-size:.76rem;color:#2563eb;font-weight:600;margin-bottom:5px">Data Science</div>
+      <div style="font-size:.72rem;color:#94a3b8;margin-bottom:5px">15 thn pengalaman · 1.2K siswa</div>
+      <div style="font-size:.72rem;color:#f59e0b;margin-bottom:12px">★ 4.9</div>
+      <a href="courses.html" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:20px;font-size:.74rem;font-weight:600;cursor:pointer;display:inline-block">Lihat Kursus</a>
+    </div><div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:22px;text-align:center;transition:all .25s" onmouseover="this.style.borderColor='#2563eb';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform=''">
+      <img src="https://i.pravatar.cc/80?img=16" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.92rem;margin-bottom:3px">Rina Cahyani</div>
+      <div style="font-size:.76rem;color:#2563eb;font-weight:600;margin-bottom:5px">Digital Marketing</div>
+      <div style="font-size:.72rem;color:#94a3b8;margin-bottom:5px">8 thn pengalaman · 3.1K siswa</div>
+      <div style="font-size:.72rem;color:#f59e0b;margin-bottom:12px">★ 4.7</div>
+      <a href="courses.html" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:20px;font-size:.74rem;font-weight:600;cursor:pointer;display:inline-block">Lihat Kursus</a>
+    </div><div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:22px;text-align:center;transition:all .25s" onmouseover="this.style.borderColor='#2563eb';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform=''">
+      <img src="https://i.pravatar.cc/80?img=6" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.92rem;margin-bottom:3px">Budi Santosa</div>
+      <div style="font-size:.76rem;color:#2563eb;font-weight:600;margin-bottom:5px">Mobile Dev</div>
+      <div style="font-size:.72rem;color:#94a3b8;margin-bottom:5px">11 thn pengalaman · 980 siswa</div>
+      <div style="font-size:.72rem;color:#f59e0b;margin-bottom:12px">★ 4.8</div>
+      <a href="courses.html" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:20px;font-size:.74rem;font-weight:600;cursor:pointer;display:inline-block">Lihat Kursus</a>
+    </div><div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:22px;text-align:center;transition:all .25s" onmouseover="this.style.borderColor='#2563eb';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e2e8f0';this.style.transform=''">
+      <img src="https://i.pravatar.cc/80?img=20" style="width:80px;height:80px;border-radius:50%;margin:0 auto 12px;border:3px solid #2563eb"/>
+      <div style="font-weight:700;font-size:.92rem;margin-bottom:3px">Sarah Johnson</div>
+      <div style="font-size:.76rem;color:#2563eb;font-weight:600;margin-bottom:5px">Bahasa Inggris</div>
+      <div style="font-size:.72rem;color:#94a3b8;margin-bottom:5px">14 thn pengalaman · 5.6K siswa</div>
+      <div style="font-size:.72rem;color:#f59e0b;margin-bottom:12px">★ 4.9</div>
+      <a href="courses.html" style="background:#2563eb;color:#fff;border:none;padding:7px 16px;border-radius:20px;font-size:.74rem;font-weight:600;cursor:pointer;display:inline-block">Lihat Kursus</a>
+    </div></div>
+</div>
+<div class="toast-c" id="toastC"></div>
+<footer>© 2026 BelajarPintar · Platform Edukasi Online Indonesia</footer>
+<script>function showToast(m){const c=document.getElementById('toastC');const el=document.createElement('div');el.className='toast';el.textContent=m;c.appendChild(el);setTimeout(()=>el.remove(),3000);}</script>
+</body></html>

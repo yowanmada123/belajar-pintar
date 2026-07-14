@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Semua Kursus – BelajarPintar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:#f8fafc;color:#1e293b;}
+a{text-decoration:none;color:inherit;}ul{list-style:none;}button{font-family:'Poppins',sans-serif;cursor:pointer;}img{display:block;max-width:100%;}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;}
+.card{background:#fff;border-radius:14px;border:1px solid #e2e8f0;padding:24px;}
+.form-group{margin-bottom:14px;}
+.form-label{display:block;font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;color:#374151;margin-bottom:5px;}
+.form-control{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;padding:10px 13px;font-size:.87rem;font-family:'Poppins',sans-serif;outline:none;color:#1e293b;transition:border-color .2s;}
+.form-control:focus{border-color:#2563eb;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:13px;}
+.btn{display:inline-flex;align-items:center;gap:6px;background:#2563eb;color:#fff;border:none;padding:10px 22px;border-radius:25px;font-size:.86rem;font-weight:600;cursor:pointer;transition:all .2s;}
+.toast-c{position:fixed;bottom:22px;left:22px;z-index:500;display:flex;flex-direction:column;gap:7px;}
+.toast{background:#0f172a;color:#fff;padding:11px 17px;border-radius:10px;font-size:.83rem;animation:fadeUp .3s;border-left:3px solid #2563eb;}
+footer{background:#0f172a;color:rgba(255,255,255,.5);padding:18px 0;text-align:center;font-size:.8rem;margin-top:60px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:768px){.form-row{grid-template-columns:1fr;}}
+</style>
+</head><body>
+<nav style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e8f0;backdrop-filter:blur(10px)">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between">
+    <div style="font-size:1.3rem;font-weight:800;color:#0f172a">Belajar<span style='color:#2563eb'>Pintar</span></div>
+    <a href="index.html" style="background:#2563eb;color:#fff;padding:9px 20px;border-radius:25px;font-size:.84rem;font-weight:600">← Beranda</a>
+  </div>
+</nav>
+<div style="background:linear-gradient(135deg,#0f172a,#1e293b);padding:44px 0;color:#fff;text-align:center;margin-bottom:32px">
+  <div class="container"><h1 style="font-size:1.8rem;font-weight:800;margin-bottom:6px">Semua Kursus – BelajarPintar</h1></div>
+</div>
+<div class="container" style="padding-bottom:40px" id="mc"></div>
+<div class="toast-c" id="toastC"></div>
+<footer>© 2026 Belajar<span style='color:#2563eb'>Pintar</span> · Indonesia</footer>
+<script>
+function showToast(m){const c=document.getElementById('toastC');const el=document.createElement('div');el.className='toast';el.textContent=m;c.appendChild(el);setTimeout(()=>el.remove(),3000);}
+function fmtP(n){return'Rp '+n.toLocaleString('id-ID');}
+const mc=document.getElementById('mc');
+
+const COURSES=[
+  {title:'Full-Stack Web Development',cat:'Coding',price:599000,img:'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=75',rating:4.9,duration:'48 jam'},
+  {title:'UI/UX Design Masterclass',cat:'Desain',price:449000,img:'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=75',rating:4.8,duration:'36 jam'},
+  {title:'Data Science & ML',cat:'Data',price:799000,img:'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=75',rating:4.9,duration:'64 jam'},
+  {title:'Digital Marketing',cat:'Marketing',price:349000,img:'https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=400&q=75',rating:4.7,duration:'24 jam'},
+  {title:'Flutter Mobile Dev',cat:'Coding',price:549000,img:'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=75',rating:4.8,duration:'40 jam'},
+  {title:'Bahasa Inggris Pro',cat:'Bahasa',price:249000,img:'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=75',rating:4.9,duration:'20 jam'},
+  {title:'Fotografi & Video',cat:'Kreatif',price:399000,img:'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=75',rating:4.7,duration:'30 jam'},
+  {title:'Keuangan & Investasi',cat:'Bisnis',price:299000,img:'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=75',rating:4.8,duration:'18 jam'},
+];
+mc.innerHTML='<div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">'+['Semua','Coding','Desain','Data','Marketing','Bahasa','Kreatif','Bisnis'].map((c,i)=>'<button onclick="filt(\''+c+'\',this)" style="padding:7px 16px;border-radius:20px;border:1.5px solid '+(i===0?'transparent':'#e2e8f0')+';background:'+(i===0?'#2563eb':'#fff')+';color:'+(i===0?'#fff':'#475569')+';font-size:.8rem;font-weight:600;cursor:pointer" class="fb">'+c+'</button>').join('')+'</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px" id="cg"></div>';
+renderC(COURSES);
+function renderC(list){const el=document.getElementById('cg');if(!el)return;el.innerHTML=list.map(c=>'<div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;transition:all .25s;cursor:pointer" onmouseover="this.style.transform=\'translateY(-4px)\';this.style.boxShadow=\'0 12px 32px rgba(37,99,235,.1)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'" onclick="window.location=\'course-detail.html\'"><div style="height:160px;overflow:hidden"><img src="'+c.img+'" style="width:100%;height:100%;object-fit:cover"/></div><div style="padding:14px"><span style="background:rgba(37,99,235,.1);color:#2563eb;font-size:.66rem;font-weight:700;padding:3px 9px;border-radius:20px;display:inline-block;margin-bottom:6px">'+c.cat+'</span><div style="font-weight:700;font-size:.92rem;margin-bottom:4px">'+c.title+'</div><div style="font-size:.75rem;color:#94a3b8;margin-bottom:8px">★ '+c.rating+' · '+c.duration+'</div><div style="display:flex;align-items:center;justify-content:space-between"><div style="font-size:.97rem;font-weight:800;color:#2563eb">'+fmtP(c.price)+'</div><button onclick="event.stopPropagation();showToast(\'✅ Kursus ditambahkan!\')" style="background:#2563eb;color:#fff;border:none;padding:6px 13px;border-radius:20px;font-size:.73rem;font-weight:600;cursor:pointer">Beli</button></div></div></div>').join('');}
+function filt(cat,el){document.querySelectorAll('.fb').forEach(b=>{b.style.background='#fff';b.style.color='#475569';b.style.border='1.5px solid #e2e8f0';});el.style.background='#2563eb';el.style.color='#fff';el.style.border='none';renderC(cat==='Semua'?COURSES:COURSES.filter(c=>c.cat===cat));}
+
+</script>
+</body></html>
